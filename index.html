@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/4.0.6/rx.all.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/immutable/3.7.3/immutable.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js"></script>
+  <script src="https://fb.me/react-15.1.0.js"></script>
+  <script src="https://fb.me/react-dom-15.1.0.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  
+  <title>Codeforces Problems Index</title>
+  
+  <style>
+    body {
+      font-size: 80%;
+    }
+
+    table, th, td
+    {
+      border-collapse: separate;
+      border-spacing:0 0.1px;
+      vertical-align: top;
+      white-space: nowrap;
+    }
+
+    .indented {
+      text-indent: 10px;
+    }
+
+    .accepted {
+      color: #1D8348;
+    }
+    .wrong_answer {
+      color: #CB4335;
+    }
+    .time_limit {
+      color: #2874A6;
+    }
+  </style>
+<style id="jsbin-css">
+body { font-family: "Courier New"; font-size: 11px}
+
+.vertical-center {vertical-align: middle}
+
+.problemstable-progressbar-container{
+  background-color: #E5E7E9;
+  height: 4px;
+}
+.problemstable-progressbar-content {
+  background-color: #239B56;
+  height: 4px;
+}
+
+.problemsgroup-progressbar-container{
+  background-color: #E5E7E9;
+  height: 4px;
+  width: 15px;
+  margin-top:6px
+}
+.problemsgroup-progressbar-content {
+  background-color: #239B56;
+  height: 4px;
+}
+
+.problem-status {
+  height: 6px;
+  width: 6px;
+  margin-top: 3px;
+}
+
+.accepted {
+  text-color: #239B56;
+  font-weight: bolder;
+}
+.time_limit {
+  text-color: #2E86C1;
+  font-weight: bolder;
+}
+.wrong_answer {
+  text-color: #E74C3C;
+  font-weight: bolder;
+}
+.no-submission {
+  text-color: #ABB2B9;
+  font-weight: lighter;
+}
+
+.problem-group {
+  width: 270px;
+}
+
+a {display: inline;}
+p {display: inline;}
+
+.compact {display: inline;}
+
+.align-right {float: right;}
+
+.table-border {
+  border-right: 1px solid #000;
+  border-color: #E5E7E9;
+  padding: 10px;
+}
+</style>
+</head>
+<body>
+  <div id="problems">
+    Loading
+  </div>
+<script id="jsbin-javascript">
+const_main_tags = Immutable.List(["dp", "graphs", "math", "data structures", "greedy", "games", "geometry"]);
+
+const problems_json = '{"status":"OK","result":{"problems":[{"contestId":742,"index":"B","name":"Arpa’s obvious problem and Mehrdad’s terrible solution","type":"PROGRAMMING","points":1000.0,"tags":["math","number theory"]},{"contestId":742,"index":"A","name":"Arpa’s hard exam and Mehrdad’s naive cheat","type":"PROGRAMMING","points":500.0,"tags":["implementation","math","number theory"]},{"contestId":741,"index":"E","name":"Arpa’s abnormal DNA and Mehrdad’s deep interest","type":"PROGRAMMING","points":2500.0,"tags":["data structures","string suffix structures"]},{"contestId":741,"index":"D","name":"Arpa’s letter-marked tree and Mehrdad’s Dokhtar-kosh paths","type":"PROGRAMMING","points":2000.0,"tags":["data structures","trees"]},{"contestId":741,"index":"C","name":"Arpa’s overnight party and Mehrdad’s silent entering","type":"PROGRAMMING","points":1250.0,"tags":["constructive algorithms","dfs and similar"]},{"contestId":741,"index":"B","name":"Arpa\u0027s weak amphitheater and Mehrdad\u0027s valuable Hoses","type":"PROGRAMMING","points":1000.0,"tags":["dfs and similar","dp","dsu"]},{"contestId":741,"index":"A","name":"Arpa\u0027s loud Owf and Mehrdad\u0027s evil plan","type":"PROGRAMMING","points":500.0,"tags":["dfs and similar","math"]},{"contestId":740,"index":"B","name":"Alyona and flowers","type":"PROGRAMMING","points":1000.0,"tags":["constructive algorithms"]},{"contestId":740,"index":"A","name":"Alyona and copybooks","type":"PROGRAMMING","points":500.0,"tags":["brute force","implementation"]},{"contestId":739,"index":"E","name":"Gosha is hunting","type":"PROGRAMMING","points":2500.0,"tags":["brute force","dp","flows"]},{"contestId":739,"index":"D","name":"Recover a functional graph","type":"PROGRAMMING","points":2000.0,"tags":["graph matchings"]},{"contestId":739,"index":"C","name":"Alyona and towers","type":"PROGRAMMING","points":1500.0,"tags":["data structures"]},{"contestId":739,"index":"B","name":"Alyona and a tree","type":"PROGRAMMING","points":1000.0,"tags":["binary search","data structures","dfs and similar","graphs","trees"]},{"contestId":739,"index":"A","name":"Alyona and mex","type":"PROGRAMMING","points":500.0,"tags":["constructive algorithms"]},{"contestId":737,"index":"F","name":"Dirty plates","type":"PROGRAMMING","points":2500.0,"tags":["constructive algorithms","math"]},{"contestId":737,"index":"E","name":"Tanya is 5!","type":"PROGRAMMING","points":2000.0,"tags":["graph matchings","graphs","greedy","schedules"]},{"contestId":736,"index":"E","name":"Chess Championship","type":"PROGRAMMING","points":2500.0,"tags":["constructive algorithms","greedy"]},{"contestId":736,"index":"D","name":"Permutations","type":"PROGRAMMING","points":2000.0,"tags":["matrices"]},{"contestId":735,"index":"E","name":"Ostap and Tree","type":"PROGRAMMING","points":2500.0,"tags":["dp","trees"]},{"contestId":735,"index":"D","name":"Taxes","type":"PROGRAMMING","points":1750.0,"tags":["math","number theory"]},{"contestId":735,"index":"C","name":"Tennis Championship","type":"PROGRAMMING","points":1750.0,"tags":["greedy","math"]},{"contestId":735,"index":"B","name":"Urbanization","type":"PROGRAMMING","points":1000.0,"tags":["greedy","sortings"]},{"contestId":735,"index":"A","name":"Ostap and Grasshopper","type":"PROGRAMMING","points":500.0,"tags":["implementation","strings"]},{"contestId":734,"index":"F","name":"Anton and School","type":"PROGRAMMING","points":2750.0,"tags":["bitmasks","constructive algorithms","implementation","math"]},{"contestId":734,"index":"E","name":"Anton and Tree","type":"PROGRAMMING","points":2000.0,"tags":["dfs and similar","dp","trees"]},{"contestId":734,"index":"D","name":"Anton and Chess","type":"PROGRAMMING","points":1500.0,"tags":["implementation"]},{"contestId":734,"index":"C","name":"Anton and Making Potions","type":"PROGRAMMING","points":1250.0,"tags":["binary search","dp","greedy","two pointers"]},{"contestId":734,"index":"B","name":"Anton and Digits","type":"PROGRAMMING","points":750.0,"tags":["implementation","math"]},{"contestId":734,"index":"A","name":"Anton and Danik","type":"PROGRAMMING","points":500.0,"tags":["implementation","strings"]},{"contestId":733,"index":"F","name":"Drivers Dissatisfaction","type":"PROGRAMMING","points":3000.0,"tags":["data structures","dsu","graphs","trees"]},{"contestId":733,"index":"E","name":"Sleep in Class","type":"PROGRAMMING","points":2750.0,"tags":["data structures","math","two pointers"]},{"contestId":733,"index":"D","name":"Kostya the Sculptor","type":"PROGRAMMING","points":2000.0,"tags":["data structures","hashing"]},{"contestId":733,"index":"C","name":"Epidemic in Monstropolis","type":"PROGRAMMING","points":2000.0,"tags":["constructive algorithms","dp","greedy","two pointers"]},{"contestId":733,"index":"B","name":"Parade","type":"PROGRAMMING","points":1000.0,"tags":["math"]},{"contestId":733,"index":"A","name":"Grasshopper And the String","type":"PROGRAMMING","points":500.0,"tags":["implementation"]},{"contestId":732,"index":"F","name":"Tourist Reform","type":"PROGRAMMING","points":2500.0,"tags":["dfs and similar"]},{"contestId":732,"index":"E","name":"Sockets","type":"PROGRAMMING","points":2000.0,"tags":["greedy","sortings"]},{"contestId":732,"index":"D","name":"Exams","type":"PROGRAMMING","points":2000.0,"tags":["binary search","greedy","sortings"]},{"contestId":732,"index":"C","name":"Sanatorium","type":"PROGRAMMING","points":1500.0,"tags":["constructive algorithms","greedy"]},{"contestId":732,"index":"B","name":"Cormen --- The Best Friend Of a Man","type":"PROGRAMMING","points":1000.0,"tags":["dp","greedy"]},{"contestId":732,"index":"A","name":"Buy a Shovel","type":"PROGRAMMING","points":500.0,"tags":["brute force","constructive algorithms","math"]},{"contestId":731,"index":"F","name":"Video Cards","type":"PROGRAMMING","points":3000.0,"tags":["brute force","data structures","implementation","number theory"]},{"contestId":731,"index":"E","name":"Funny Game","type":"PROGRAMMING","points":2500.0,"tags":["dp","games"]},{"contestId":731,"index":"D","name":"80-th Level Archeology","type":"PROGRAMMING","points":2000.0,"tags":["brute force","data structures","greedy","sortings"]},{"contestId":731,"index":"C","name":"Socks","type":"PROGRAMMING","points":1500.0,"tags":["dsu","graphs","greedy"]},{"contestId":731,"index":"B","name":"Coupons and Discounts","type":"PROGRAMMING","points":1000.0,"tags":["constructive algorithms","greedy"]},{"contestId":731,"index":"A","name":"Night at the Museum","type":"PROGRAMMING","points":500.0,"tags":["implementation","strings"]},{"contestId":730,"index":"L","name":"Expression Queries","type":"PROGRAMMING","tags":[]},{"contestId":730,"index":"K","name":"Roads Orientation Problem","type":"PROGRAMMING","tags":[]},{"contestId":730,"index":"J","name":"Bottles","type":"PROGRAMMING","tags":["dp"]},{"contestId":730,"index":"I","name":"Olympiad in Programming and Sports","type":"PROGRAMMING","tags":["dp","flows","greedy"]},{"contestId":730,"index":"H","name":"Delete Them","type":"PROGRAMMING","tags":["implementation"]},{"contestId":730,"index":"G","name":"Car Repair Shop","type":"PROGRAMMING","tags":["implementation"]},{"contestId":730,"index":"F","name":"Ber Patio","type":"PROGRAMMING","tags":[]},{"contestId":730,"index":"E","name":"Award Ceremony","type":"PROGRAMMING","tags":["greedy"]},{"contestId":730,"index":"D","name":"Running Over The Bridges","type":"PROGRAMMING","tags":["greedy","implementation"]},{"contestId":730,"index":"C","name":"Bulmart","type":"PROGRAMMING","tags":["binary search","dfs and similar"]},{"contestId":730,"index":"B","name":"Minimum and Maximum","type":"PROGRAMMING","tags":["constructive algorithms"]},{"contestId":730,"index":"A","name":"Toda 2","type":"PROGRAMMING","tags":["greedy"]},{"contestId":729,"index":"F","name":"Financiers Game","type":"PROGRAMMING","points":2500.0,"tags":["dp"]},{"contestId":729,"index":"E","name":"Subordinates","type":"PROGRAMMING","points":2000.0,"tags":["constructive algorithms","data structures","greedy","sortings"]},{"contestId":729,"index":"D","name":"Sea Battle","type":"PROGRAMMING","points":1750.0,"tags":["constructive algorithms","greedy"]},{"contestId":729,"index":"C","name":"Road to Cinema","type":"PROGRAMMING","points":1750.0,"tags":["binary search","greedy","sortings"]}]}}';
+const submissions_json = '{"status":"OK","result":[{"id":22757237,"contestId":741,"creationTimeSeconds":1481040775,"relativeTimeSeconds":5875,"problem":{"contestId":742,"index":"B","name":"Arpa’s obvious problem and Mehrdad’s terrible solution","type":"PROGRAMMING","points":1000.0,"tags":["math","number theory"]},"author":{"contestId":741,"members":[{"handle":"Yousef_Salama"}],"participantType":"CONTESTANT","ghost":false,"room":20,"startTimeSeconds":1481034900},"programmingLanguage":"GNU C++11","verdict":"OK","testset":"CHALLENGES","passedTestCount":0,"timeConsumedMillis":46,"memoryConsumedBytes":2048000},{"id":22746057,"contestId":741,"creationTimeSeconds":1481037546,"relativeTimeSeconds":2646,"problem":{"contestId":741,"index":"A","name":"Arpa\u0027s loud Owf and Mehrdad\u0027s evil plan","type":"PROGRAMMING","points":500.0,"tags":["dfs and similar","math"]},"author":{"contestId":741,"members":[{"handle":"Yousef_Salama"}],"participantType":"CONTESTANT","ghost":false,"room":20,"startTimeSeconds":1481034900},"programmingLanguage":"GNU C++11","verdict":"CHALLENGED","testset":"CHALLENGES","passedTestCount":10,"timeConsumedMillis":15,"memoryConsumedBytes":2048000},{"id":22745778,"contestId":741,"creationTimeSeconds":1481037492,"relativeTimeSeconds":2591,"problem":{"contestId":741,"index":"D","name":"Arpa’s letter-marked tree and Mehrdad’s Dokhtar-kosh paths","type":"PROGRAMMING","points":2000.0,"tags":["data structures","trees"]},"author":{"contestId":741,"members":[{"handle":"Yousef_Salama"}],"participantType":"CONTESTANT","ghost":false,"room":20,"startTimeSeconds":1481034900},"programmingLanguage":"GNU C++11","verdict":"WRONG_ANSWER","testset":"PRETESTS","passedTestCount":2,"timeConsumedMillis":15,"memoryConsumedBytes":26112000},{"id":22742232,"contestId":741,"creationTimeSeconds":1481036653,"relativeTimeSeconds":1753,"problem":{"contestId":741,"index":"D","name":"Arpa’s letter-marked tree and Mehrdad’s Dokhtar-kosh paths","type":"PROGRAMMING","points":2000.0,"tags":["data structures","trees"]},"author":{"contestId":741,"members":[{"handle":"Yousef_Salama"}],"participantType":"CONTESTANT","ghost":false,"room":20,"startTimeSeconds":1481034900},"programmingLanguage":"GNU C++11","verdict":"WRONG_ANSWER","testset":"PRETESTS","passedTestCount":2,"timeConsumedMillis":15,"memoryConsumedBytes":26112000},{"id":22648860,"contestId":736,"creationTimeSeconds":1480628124,"relativeTimeSeconds":2147483647,"problem":{"contestId":736,"index":"E","name":"Chess Championship","type":"PROGRAMMING","points":2500.0,"tags":["constructive algorithms","flows","greedy"]},"author":{"contestId":736,"members":[{"handle":"Yousef_Salama"}],"participantType":"PRACTICE","ghost":false,"startTimeSeconds":1480264500},"programmingLanguage":"GNU C++11","verdict":"WRONG_ANSWER","testset":"TESTS","passedTestCount":12,"timeConsumedMillis":77,"memoryConsumedBytes":9113600},{"id":22560970,"contestId":736,"creationTimeSeconds":1480283338,"relativeTimeSeconds":2147483647,"problem":{"contestId":736,"index":"D","name":"Permutations","type":"PROGRAMMING","points":2000.0,"tags":["matrices"]},"author":{"contestId":736,"members":[{"handle":"Yousef_Salama"}],"participantType":"PRACTICE","ghost":false,"startTimeSeconds":1480264500},"programmingLanguage":"GNU C++11","verdict":"OK","testset":"TESTS","passedTestCount":36,"timeConsumedMillis":405,"memoryConsumedBytes":5017600},{"id":22536092,"contestId":736,"creationTimeSeconds":1480265782,"relativeTimeSeconds":1282,"problem":{"contestId":736,"index":"B","name":"Taxes","type":"PROGRAMMING","points":750.0,"tags":["math","number theory"]}}]}';
+
+const mock_codeforces = true;
+
+$(document).ready(() => {
+  const $problems = new Rx.ReplaySubject(1, null,  Rx.Scheduler.default);
+  const $submissions = new Rx.ReplaySubject(1, null,  Rx.Scheduler.default);
+  
+  var urlParams = new URLSearchParams(window.location.search);
+  const handle_name = urlParams.get('handle');
+  console.log(handle_name);
+ 
+  if (mock_codeforces) {
+    $problems.onNext(JSON.parse(problems_json).result.problems);
+    $submissions.onNext(JSON.parse(submissions_json).result); 
+  } else {
+    $.get(
+      "http://codeforces.com/api/problemset.problems",
+      (data) => {
+        console.log("Got problem set from CF");
+        $problems.onNext(data.result.problems);
+      });
+    
+    $.get(
+      'http://codeforces.com/api/user.status?handle=' + handle_name,
+      (data) => {
+        console.log("Got user submissions from CF");
+        $submissions.onNext(data.result);
+      });
+  }
+    
+  Rx.Observable.zip(
+    $problems,
+    $submissions,
+    (p, s) => { return {problems: p, submissions: s};})
+    .subscribe(data => {
+      const problems = Immutable.fromJS(data.problems);
+      const submissions = Immutable.fromJS(data.submissions);
+
+      const problems_with_verdict = problems.map(p => {
+        const problem_submissions = submissions.filter(s => s.get('problem').get('name') == p.get('name'));
+        return p.set('verdict', problem_submissions.size == 0 ? "NONE" : problem_submissions.first().get('verdict'));
+      });
+      
+      ReactDOM.render(
+        React.createElement(ProblemsTable, {problems: problems_with_verdict}),
+        document.getElementById('problems')
+      );
+    });
+});
+
+class Entity extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {id: Math.random()};
+    }
+    copy(new_values) {
+        return Object.assign(this.get_default(), this, new_values);
+    }
+    get_default() {
+        return eval("new " + this.constructor.name + "()");
+    }
+    equals(o) {
+        return this.state.id == o.state.id;
+    }
+}
+
+class ProblemsTable extends Entity {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    const problems_by_main_tag = this.props.problems
+      .filter(p => Problem.hasMainTag(p))
+      .groupBy(p => Problem.getMainTags(p).toString())
+      .map((problems, tag) => {
+        const problems_count = problems.size;
+        const problems_solved_count = problems.filter(p => p.get('verdict') == "OK").size;
+        const perc = 100 * problems_solved_count / problems_count;
+        return React.createElement("td", {key: tag, className: "table-border"}, 
+          React.createElement("div", null, 
+            React.createElement("h2", {className: "compact"}, " ", tag.toUpperCase(), " "), 
+            React.createElement(ProblemsTableProgressBar, {perc: perc})
+          ), 
+          React.createElement("br", null), 
+          React.createElement(ProblemsGroups, {problems: problems})
+        )
+      });
+        
+    return (
+      React.createElement("table", null, 
+        React.createElement("tbody", null, 
+          React.createElement("tr", null, 
+            problems_by_main_tag
+          )
+        )
+      ));
+  }
+}
+
+class ProblemsTableProgressBar extends Entity {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    const perc = this.props.perc;
+    const content_style = {width: perc + "%"};
+    
+    return (
+      React.createElement("div", {className: "problemstable-progressbar-container"}, 
+        React.createElement("div", {className: "problemstable-progressbar-content", style: content_style})
+      ));
+  }
+}
+
+class ProblemsGroupProgressBar extends Entity {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    const perc = this.props.perc;
+    const content_style = {width: perc + "%"};
+    
+    return (
+      React.createElement("table", null, 
+        React.createElement("tbody", null, 
+          React.createElement("tr", null, 
+            React.createElement("td", null, "["), 
+            React.createElement("td", null, 
+              React.createElement("div", {className: "problemsgroup-progressbar-container"}, 
+                React.createElement("div", {className: "problemsgroup-progressbar-content", style: content_style})
+              )
+            ), 
+            React.createElement("td", null, "]")
+          )
+        )
+      ));
+  }
+}
+
+class ProblemsGroups extends Entity {
+  constructor(props) {
+    super(props);
+  } 
+  render() {
+    const problems_by_sub_tag = this.props.problems
+      .groupBy(p => Problem.getSubTags(p).toString())
+      .map((problems, tag) => {
+        return React.createElement("div", {key: tag}, 
+          React.createElement(ProblemsGroup, {tag: tag, problems: problems})
+        )});
+        
+    return React.createElement("div", {className: "problem-group"}, " ", problems_by_sub_tag, " ");
+  }
+}
+
+class ProblemsGroup extends Entity {
+  constructor(props) {
+    super(props);
+    this.state = {collapsed: true};
+    
+    this.handleClick = this.handleClick.bind(this);
+  } 
+  handleClick() {
+    this.setState(prevState => ({
+      collapsed: !prevState.collapsed
+    }));
+  }
+  render() {
+        const problems_count = this.props.problems.size;
+        const problems_solved_count = this.props.problems.filter(p => p.get('verdict') == "OK").size;
+        const perc = 100 * problems_solved_count / problems_count;
+       
+		const rendered_problems = this.state.collapsed ? React.createElement("div", null) : React.createElement("div", null, React.createElement(Problems, {problems: this.props.problems}), " ", React.createElement("br", null), " "); 
+        const rendered_collapse_sign = this.state.collapsed ? '[+]' : '[-]';
+        
+        return React.createElement("div", null, 
+          React.createElement("table", {onClick: this.handleClick}, 
+            React.createElement("tbody", null, 
+              React.createElement("tr", null, 
+                React.createElement("td", {className: "vertical-center"}, 
+                  React.createElement("b", null, " ", rendered_collapse_sign, " ")
+                ), 
+                React.createElement("td", {className: "vertical-center"}, 
+                  React.createElement("b", null, " ", this.props.tag.toUpperCase(), " ")
+                ), 
+                React.createElement("td", {className: "vertical-center"}, 
+                  React.createElement(ProblemsGroupProgressBar, {perc: perc})
+                )
+              )
+            )
+          ), 
+
+          rendered_problems
+        );
+  }
+}
+
+class Problems extends Entity {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    const sorted_problems = this.props.problems.sort((a, b) => Problem.compare(a, b));
+    const problems = sorted_problems.map(problem => 
+      React.createElement("tr", {key: problem.get('name')}, 
+        React.createElement("td", null, 
+          React.createElement(Problem, {problem: problem})
+        )
+      ));
+      
+    return React.createElement("table", null, 
+              React.createElement("tbody", null, 
+                problems
+              )
+           ); 
+  }
+}
+
+class Problem extends Entity {
+  constructor(props) {
+    super(props);
+    this.state.verdict = "";
+  }
+  static getSubTags(problem) {
+    var res = problem.get('tags').filter(t => !const_main_tags.some(mt => t == mt));
+    
+    if (!res.isEmpty()) return res.first();
+    else return "other";
+  }
+  static getShortName(problem) {
+    var name_size = problem.get('name').length;
+    var max_size = 28;
+    var column_size = 30;
+    
+    var problem_name = problem.get('name');
+    var short_name = name_size <= max_size ? problem_name : problem_name.substring(0, max_size);
+    
+    var result = Immutable.Range(0, column_size - short_name.length).map(c => '.').reduce((a, v) => a + v);
+    
+    return short_name + result;
+  }
+  static hasMainTag(problem) {
+    return problem.get('tags').some(t => const_main_tags.some(mt => t == mt));
+  }
+  static getMainTags(problem) {
+    const main_tags = problem.get('tags').filter(t => const_main_tags.some(mt => t == mt));
+    
+    if (!main_tags.isEmpty()) return main_tags.first();
+    else return "misc";
+  }
+  static getVerdictGroup(problem) {
+    const verdictGroups = {
+      "OK": "solved",
+      "WRONG_ANSWER": "not-solved",
+      "CHALLENGED": "solved",
+      "TIME_LIMIT_EXCEEDED": "not-solved",
+      "NONE": "not-solved"
+    }
+    
+    return verdictGroups[problem.get('verdict')];
+  }
+  static compare(a, b) {
+    if (a.get('contestId') == b.get('contestId') && a.get('name') == b.get('name')) return 0;
+    if (Problem.getVerdictGroup(a) == Problem.getVerdictGroup(b)) return a.get('points') >= b.get('points');
+    
+    if (Problem.getVerdictGroup(a) == "not-solved") return -1;
+    if (Problem.getVerdictGroup(b) == "not-solved") return 1;
+  }
+  static getUrl(problem) {
+    return "http://codeforces.com/problemset/problem/" + problem.get('contestId') + "/" + problem.get('index');
+  }
+  static getPoints(problem) {
+    const points = problem.get('points');
+    return points ? points : '-';
+  }
+  render() {
+    var verdictToClassMapping = {
+      "OK": "accepted",
+      "WRONG_ANSWER": "wrong_answer",
+      "CHALLENGED": "wrong_answer",
+      "TIME_LIMIT_EXCEEDED": "time_limit",
+      "NONE": "no-submission"
+    }
+    
+    const verdict = this.props.problem.get('verdict');
+    const color_class = verdictToClassMapping[verdict];
+    
+    return (
+      React.createElement("table", null, 
+        React.createElement("tbody", null, 
+        React.createElement("tr", null, 
+          React.createElement("td", null, 
+            React.createElement("a", {href: Problem.getUrl(this.props.problem)}, " * ")
+          ), 
+          React.createElement("td", null, 
+            Problem.getShortName(this.props.problem), " ["
+          ), 
+          React.createElement("td", null, 
+            React.createElement("div", {className: '' + color_class}, " ", Problem.getPoints(this.props.problem), " ")
+          ), 
+          React.createElement("td", null, 
+            "]"
+          )
+        )
+        )
+      ))
+  }
+}
+</script>
+</body>
+</html>
