@@ -106,28 +106,31 @@ p {display: inline;}
 </style>
 </head>
 <body>
-  <div id="problems">
-    Loading
-  </div>
+  <div id="user_info"> </div>
+  <div id="problems"> Loading </div>
+
 <script id="jsbin-javascript">
 const_main_tags = Immutable.List(["dp", "graphs", "math", "data structures", "greedy", "games", "geometry"]);
 
 const problems_json = '{"status":"OK","result":{"problems":[{"contestId":742,"index":"B","name":"Arpa’s obvious problem and Mehrdad’s terrible solution","type":"PROGRAMMING","points":1000.0,"tags":["math","number theory"]},{"contestId":742,"index":"A","name":"Arpa’s hard exam and Mehrdad’s naive cheat","type":"PROGRAMMING","points":500.0,"tags":["implementation","math","number theory"]},{"contestId":741,"index":"E","name":"Arpa’s abnormal DNA and Mehrdad’s deep interest","type":"PROGRAMMING","points":2500.0,"tags":["data structures","string suffix structures"]},{"contestId":741,"index":"D","name":"Arpa’s letter-marked tree and Mehrdad’s Dokhtar-kosh paths","type":"PROGRAMMING","points":2000.0,"tags":["data structures","trees"]},{"contestId":741,"index":"C","name":"Arpa’s overnight party and Mehrdad’s silent entering","type":"PROGRAMMING","points":1250.0,"tags":["constructive algorithms","dfs and similar"]},{"contestId":741,"index":"B","name":"Arpa\u0027s weak amphitheater and Mehrdad\u0027s valuable Hoses","type":"PROGRAMMING","points":1000.0,"tags":["dfs and similar","dp","dsu"]},{"contestId":741,"index":"A","name":"Arpa\u0027s loud Owf and Mehrdad\u0027s evil plan","type":"PROGRAMMING","points":500.0,"tags":["dfs and similar","math"]},{"contestId":740,"index":"B","name":"Alyona and flowers","type":"PROGRAMMING","points":1000.0,"tags":["constructive algorithms"]},{"contestId":740,"index":"A","name":"Alyona and copybooks","type":"PROGRAMMING","points":500.0,"tags":["brute force","implementation"]},{"contestId":739,"index":"E","name":"Gosha is hunting","type":"PROGRAMMING","points":2500.0,"tags":["brute force","dp","flows"]},{"contestId":739,"index":"D","name":"Recover a functional graph","type":"PROGRAMMING","points":2000.0,"tags":["graph matchings"]},{"contestId":739,"index":"C","name":"Alyona and towers","type":"PROGRAMMING","points":1500.0,"tags":["data structures"]},{"contestId":739,"index":"B","name":"Alyona and a tree","type":"PROGRAMMING","points":1000.0,"tags":["binary search","data structures","dfs and similar","graphs","trees"]},{"contestId":739,"index":"A","name":"Alyona and mex","type":"PROGRAMMING","points":500.0,"tags":["constructive algorithms"]},{"contestId":737,"index":"F","name":"Dirty plates","type":"PROGRAMMING","points":2500.0,"tags":["constructive algorithms","math"]},{"contestId":737,"index":"E","name":"Tanya is 5!","type":"PROGRAMMING","points":2000.0,"tags":["graph matchings","graphs","greedy","schedules"]},{"contestId":736,"index":"E","name":"Chess Championship","type":"PROGRAMMING","points":2500.0,"tags":["constructive algorithms","greedy"]},{"contestId":736,"index":"D","name":"Permutations","type":"PROGRAMMING","points":2000.0,"tags":["matrices"]},{"contestId":735,"index":"E","name":"Ostap and Tree","type":"PROGRAMMING","points":2500.0,"tags":["dp","trees"]},{"contestId":735,"index":"D","name":"Taxes","type":"PROGRAMMING","points":1750.0,"tags":["math","number theory"]},{"contestId":735,"index":"C","name":"Tennis Championship","type":"PROGRAMMING","points":1750.0,"tags":["greedy","math"]},{"contestId":735,"index":"B","name":"Urbanization","type":"PROGRAMMING","points":1000.0,"tags":["greedy","sortings"]},{"contestId":735,"index":"A","name":"Ostap and Grasshopper","type":"PROGRAMMING","points":500.0,"tags":["implementation","strings"]},{"contestId":734,"index":"F","name":"Anton and School","type":"PROGRAMMING","points":2750.0,"tags":["bitmasks","constructive algorithms","implementation","math"]},{"contestId":734,"index":"E","name":"Anton and Tree","type":"PROGRAMMING","points":2000.0,"tags":["dfs and similar","dp","trees"]},{"contestId":734,"index":"D","name":"Anton and Chess","type":"PROGRAMMING","points":1500.0,"tags":["implementation"]},{"contestId":734,"index":"C","name":"Anton and Making Potions","type":"PROGRAMMING","points":1250.0,"tags":["binary search","dp","greedy","two pointers"]},{"contestId":734,"index":"B","name":"Anton and Digits","type":"PROGRAMMING","points":750.0,"tags":["implementation","math"]},{"contestId":734,"index":"A","name":"Anton and Danik","type":"PROGRAMMING","points":500.0,"tags":["implementation","strings"]},{"contestId":733,"index":"F","name":"Drivers Dissatisfaction","type":"PROGRAMMING","points":3000.0,"tags":["data structures","dsu","graphs","trees"]},{"contestId":733,"index":"E","name":"Sleep in Class","type":"PROGRAMMING","points":2750.0,"tags":["data structures","math","two pointers"]},{"contestId":733,"index":"D","name":"Kostya the Sculptor","type":"PROGRAMMING","points":2000.0,"tags":["data structures","hashing"]},{"contestId":733,"index":"C","name":"Epidemic in Monstropolis","type":"PROGRAMMING","points":2000.0,"tags":["constructive algorithms","dp","greedy","two pointers"]},{"contestId":733,"index":"B","name":"Parade","type":"PROGRAMMING","points":1000.0,"tags":["math"]},{"contestId":733,"index":"A","name":"Grasshopper And the String","type":"PROGRAMMING","points":500.0,"tags":["implementation"]},{"contestId":732,"index":"F","name":"Tourist Reform","type":"PROGRAMMING","points":2500.0,"tags":["dfs and similar"]},{"contestId":732,"index":"E","name":"Sockets","type":"PROGRAMMING","points":2000.0,"tags":["greedy","sortings"]},{"contestId":732,"index":"D","name":"Exams","type":"PROGRAMMING","points":2000.0,"tags":["binary search","greedy","sortings"]},{"contestId":732,"index":"C","name":"Sanatorium","type":"PROGRAMMING","points":1500.0,"tags":["constructive algorithms","greedy"]},{"contestId":732,"index":"B","name":"Cormen --- The Best Friend Of a Man","type":"PROGRAMMING","points":1000.0,"tags":["dp","greedy"]},{"contestId":732,"index":"A","name":"Buy a Shovel","type":"PROGRAMMING","points":500.0,"tags":["brute force","constructive algorithms","math"]},{"contestId":731,"index":"F","name":"Video Cards","type":"PROGRAMMING","points":3000.0,"tags":["brute force","data structures","implementation","number theory"]},{"contestId":731,"index":"E","name":"Funny Game","type":"PROGRAMMING","points":2500.0,"tags":["dp","games"]},{"contestId":731,"index":"D","name":"80-th Level Archeology","type":"PROGRAMMING","points":2000.0,"tags":["brute force","data structures","greedy","sortings"]},{"contestId":731,"index":"C","name":"Socks","type":"PROGRAMMING","points":1500.0,"tags":["dsu","graphs","greedy"]},{"contestId":731,"index":"B","name":"Coupons and Discounts","type":"PROGRAMMING","points":1000.0,"tags":["constructive algorithms","greedy"]},{"contestId":731,"index":"A","name":"Night at the Museum","type":"PROGRAMMING","points":500.0,"tags":["implementation","strings"]},{"contestId":730,"index":"L","name":"Expression Queries","type":"PROGRAMMING","tags":[]},{"contestId":730,"index":"K","name":"Roads Orientation Problem","type":"PROGRAMMING","tags":[]},{"contestId":730,"index":"J","name":"Bottles","type":"PROGRAMMING","tags":["dp"]},{"contestId":730,"index":"I","name":"Olympiad in Programming and Sports","type":"PROGRAMMING","tags":["dp","flows","greedy"]},{"contestId":730,"index":"H","name":"Delete Them","type":"PROGRAMMING","tags":["implementation"]},{"contestId":730,"index":"G","name":"Car Repair Shop","type":"PROGRAMMING","tags":["implementation"]},{"contestId":730,"index":"F","name":"Ber Patio","type":"PROGRAMMING","tags":[]},{"contestId":730,"index":"E","name":"Award Ceremony","type":"PROGRAMMING","tags":["greedy"]},{"contestId":730,"index":"D","name":"Running Over The Bridges","type":"PROGRAMMING","tags":["greedy","implementation"]},{"contestId":730,"index":"C","name":"Bulmart","type":"PROGRAMMING","tags":["binary search","dfs and similar"]},{"contestId":730,"index":"B","name":"Minimum and Maximum","type":"PROGRAMMING","tags":["constructive algorithms"]},{"contestId":730,"index":"A","name":"Toda 2","type":"PROGRAMMING","tags":["greedy"]},{"contestId":729,"index":"F","name":"Financiers Game","type":"PROGRAMMING","points":2500.0,"tags":["dp"]},{"contestId":729,"index":"E","name":"Subordinates","type":"PROGRAMMING","points":2000.0,"tags":["constructive algorithms","data structures","greedy","sortings"]},{"contestId":729,"index":"D","name":"Sea Battle","type":"PROGRAMMING","points":1750.0,"tags":["constructive algorithms","greedy"]},{"contestId":729,"index":"C","name":"Road to Cinema","type":"PROGRAMMING","points":1750.0,"tags":["binary search","greedy","sortings"]}]}}';
 const submissions_json = '{"status":"OK","result":[{"id":22757237,"contestId":741,"creationTimeSeconds":1481040775,"relativeTimeSeconds":5875,"problem":{"contestId":742,"index":"B","name":"Arpa’s obvious problem and Mehrdad’s terrible solution","type":"PROGRAMMING","points":1000.0,"tags":["math","number theory"]},"author":{"contestId":741,"members":[{"handle":"Yousef_Salama"}],"participantType":"CONTESTANT","ghost":false,"room":20,"startTimeSeconds":1481034900},"programmingLanguage":"GNU C++11","verdict":"OK","testset":"CHALLENGES","passedTestCount":0,"timeConsumedMillis":46,"memoryConsumedBytes":2048000},{"id":22746057,"contestId":741,"creationTimeSeconds":1481037546,"relativeTimeSeconds":2646,"problem":{"contestId":741,"index":"A","name":"Arpa\u0027s loud Owf and Mehrdad\u0027s evil plan","type":"PROGRAMMING","points":500.0,"tags":["dfs and similar","math"]},"author":{"contestId":741,"members":[{"handle":"Yousef_Salama"}],"participantType":"CONTESTANT","ghost":false,"room":20,"startTimeSeconds":1481034900},"programmingLanguage":"GNU C++11","verdict":"CHALLENGED","testset":"CHALLENGES","passedTestCount":10,"timeConsumedMillis":15,"memoryConsumedBytes":2048000},{"id":22745778,"contestId":741,"creationTimeSeconds":1481037492,"relativeTimeSeconds":2591,"problem":{"contestId":741,"index":"D","name":"Arpa’s letter-marked tree and Mehrdad’s Dokhtar-kosh paths","type":"PROGRAMMING","points":2000.0,"tags":["data structures","trees"]},"author":{"contestId":741,"members":[{"handle":"Yousef_Salama"}],"participantType":"CONTESTANT","ghost":false,"room":20,"startTimeSeconds":1481034900},"programmingLanguage":"GNU C++11","verdict":"WRONG_ANSWER","testset":"PRETESTS","passedTestCount":2,"timeConsumedMillis":15,"memoryConsumedBytes":26112000},{"id":22742232,"contestId":741,"creationTimeSeconds":1481036653,"relativeTimeSeconds":1753,"problem":{"contestId":741,"index":"D","name":"Arpa’s letter-marked tree and Mehrdad’s Dokhtar-kosh paths","type":"PROGRAMMING","points":2000.0,"tags":["data structures","trees"]},"author":{"contestId":741,"members":[{"handle":"Yousef_Salama"}],"participantType":"CONTESTANT","ghost":false,"room":20,"startTimeSeconds":1481034900},"programmingLanguage":"GNU C++11","verdict":"WRONG_ANSWER","testset":"PRETESTS","passedTestCount":2,"timeConsumedMillis":15,"memoryConsumedBytes":26112000},{"id":22648860,"contestId":736,"creationTimeSeconds":1480628124,"relativeTimeSeconds":2147483647,"problem":{"contestId":736,"index":"E","name":"Chess Championship","type":"PROGRAMMING","points":2500.0,"tags":["constructive algorithms","flows","greedy"]},"author":{"contestId":736,"members":[{"handle":"Yousef_Salama"}],"participantType":"PRACTICE","ghost":false,"startTimeSeconds":1480264500},"programmingLanguage":"GNU C++11","verdict":"WRONG_ANSWER","testset":"TESTS","passedTestCount":12,"timeConsumedMillis":77,"memoryConsumedBytes":9113600},{"id":22560970,"contestId":736,"creationTimeSeconds":1480283338,"relativeTimeSeconds":2147483647,"problem":{"contestId":736,"index":"D","name":"Permutations","type":"PROGRAMMING","points":2000.0,"tags":["matrices"]},"author":{"contestId":736,"members":[{"handle":"Yousef_Salama"}],"participantType":"PRACTICE","ghost":false,"startTimeSeconds":1480264500},"programmingLanguage":"GNU C++11","verdict":"OK","testset":"TESTS","passedTestCount":36,"timeConsumedMillis":405,"memoryConsumedBytes":5017600},{"id":22536092,"contestId":736,"creationTimeSeconds":1480265782,"relativeTimeSeconds":1282,"problem":{"contestId":736,"index":"B","name":"Taxes","type":"PROGRAMMING","points":750.0,"tags":["math","number theory"]}}]}';
 
+const user_info_json = '{"status":"OK","result":[{"lastName":"Salama","country":"Egypt","lastOnlineTimeSeconds":1483206938,"city":"Alexandria","rating":1898,"friendOfCount":541,"titlePhoto":"http://userpic.codeforces.com/15025/title/5114f0aa9a66ddb2.jpg","handle":"Yousef_Salama","avatar":"http://userpic.codeforces.com/15025/avatar/d25e177773f2cec7.jpg","firstName":"Yousef","contribution":47,"rank":"expert","maxRating":2246,"registrationTimeSeconds":1299586324,"maxRank":"master"}]}';
+
 const mock_codeforces = true;
 
 $(document).ready(() => {
   const $problems = new Rx.ReplaySubject(1, null,  Rx.Scheduler.default);
   const $submissions = new Rx.ReplaySubject(1, null,  Rx.Scheduler.default);
+  const $user_info = new Rx.ReplaySubject(1, null,  Rx.Scheduler.default);
   
   var urlParams = new URLSearchParams(window.location.search);
   const handle_name = urlParams.get('handle');
-  console.log(handle_name);
  
   if (mock_codeforces) {
     $problems.onNext(JSON.parse(problems_json).result.problems);
     $submissions.onNext(JSON.parse(submissions_json).result); 
+    $user_info.onNext(JSON.parse(user_info_json).result[0]);
   } else {
     $.get(
       "http://codeforces.com/api/problemset.problems",
@@ -142,21 +145,35 @@ $(document).ready(() => {
         console.log("Got user submissions from CF");
         $submissions.onNext(data.result);
       });
+
+    $.get(
+      'http://codeforces.com/api/user.info?handles=' + handle_name,
+      (data) => {
+        console.log("Got user info from CF");
+        $user_info.onNext(data.result[0]);
+      });
   }
     
   Rx.Observable.zip(
     $problems,
     $submissions,
-    (p, s) => { return {problems: p, submissions: s};})
+    $user_info,
+    (p, s, u) => { return {problems: p, submissions: s, user_info: u};})
     .subscribe(data => {
       const problems = Immutable.fromJS(data.problems);
       const submissions = Immutable.fromJS(data.submissions);
+      const user_info = Immutable.fromJS(data.user_info);
 
       const problems_with_verdict = problems.map(p => {
         const problem_submissions = submissions.filter(s => s.get('problem').get('name') == p.get('name'));
         return p.set('verdict', problem_submissions.size == 0 ? "NONE" : problem_submissions.first().get('verdict'));
       });
-      
+
+      ReactDOM.render(
+        React.createElement(UserInfo, {user_info: user_info}),
+        document.getElementById('user_info')
+      );
+
       ReactDOM.render(
         React.createElement(ProblemsTable, {problems: problems_with_verdict}),
         document.getElementById('problems')
@@ -178,6 +195,27 @@ class Entity extends React.Component {
     equals(o) {
         return this.state.id == o.state.id;
     }
+}
+
+class UserInfo extends Entity {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    const name = this.props.user_info.get('firstName') + ' ' + this.props.user_info.get('lastName');
+    const photo = this.props.user_info.get('titlePhoto');
+
+    return React.createElement("table", null, 
+        React.createElement("tbody", null, 
+          React.createElement("tr", null, 
+            React.createElement("td", null, name)
+          ),
+          React.createElement("tr", null, 
+            React.createElement("img", {src: photo})
+          )
+        )
+      );
+  }
 }
 
 class ProblemsTable extends Entity {
